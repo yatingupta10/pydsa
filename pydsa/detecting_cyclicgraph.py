@@ -11,7 +11,7 @@ def detecting_cyclicgraph(g):
 			return False
 		visited.add(vertex)
 		path.add(vertex)
-		for neighbour in g.get(vertex, set([None])):
+		for neighbour in g.get(vertex, ()):
 			if neighbour in path or visit(neighbour):
 				return True
 		path.remove(vertex)
